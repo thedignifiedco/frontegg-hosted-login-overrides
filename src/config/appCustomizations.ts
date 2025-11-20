@@ -50,7 +50,7 @@ const defaultCustomization: FronteggOverrides = {
       logo: {
         image: process.env.LOGO_URL || 'https://biopharma.dignifiedlabs.com/pharmacy.png',
         alt: 'Dignified Labs Logo',
-        maxHeight: '60px',
+        favicon: process.env.FAVICON_URL || 'https://biopharma.dignifiedlabs.com/pharmacy.png'
       },
       rootStyle: {
         background:
