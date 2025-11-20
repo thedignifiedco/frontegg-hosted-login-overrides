@@ -11,20 +11,12 @@ interface FronteggOverrides {
       };
       rootStyle?: Record<string, string>;
       boxStyle?: Record<string, string>;
-      typography?: Record<string, string>;
+      typographyStyleOptions?: Record<string, string>;
       inputTheme?: Record<string, any>;
       submitButtonTheme?: Record<string, any>;
-      linkButtonTheme?: Record<string, any>;
       socialLogins?: Record<string, any>;
       signup?: Record<string, any>;
       login?: Record<string, any>;
-      boxFooter?: {
-        html?: string;
-        text?: string;
-        style?: Record<string, string>;
-      };
-      mfa?: Record<string, any>;
-      errorTheme?: Record<string, string>;
     };
   };
   localizations: {
@@ -73,7 +65,7 @@ const defaultCustomization: FronteggOverrides = {
         padding: '40px',
         maxWidth: '480px',
       },
-      typography: {
+      typographyStyleOptions: {
         fontFamily:
           '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
         fontSize: '16px',
@@ -135,19 +127,6 @@ const defaultCustomization: FronteggOverrides = {
           transform: 'translateY(0)',
         },
       },
-      linkButtonTheme: {
-        base: {
-          color: '#0066cc',
-          textDecoration: 'none',
-          fontWeight: '500',
-          fontSize: '14px',
-          transition: 'color 0.2s ease',
-        },
-        hover: {
-          color: '#0052a3',
-          textDecoration: 'underline',
-        },
-      },
       socialLogins: {
         divider: {
           text: 'OR',
@@ -159,36 +138,7 @@ const defaultCustomization: FronteggOverrides = {
       signup: {},
       login: {
         docTitle: 'Dignified Labs - Clinical Research Portal Login',
-      },
-      boxFooter: {
-        html:
-          '<div style="text-align: center; margin-top: 30px; font-size: 12px; line-height: 16px; color: #36373C;">By continuing, I agree to Dignified Labs\' <a target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;" href="https://dignifiedlabs.com/terms">Terms of Service</a> and <a target="_blank" rel="noopener noreferrer" style="color: #0066cc; text-decoration: none;" href="https://dignifiedlabs.com/policy">Privacy Policy</a>.</div>',
-        text:
-          'By continuing, I agree to Dignified Labs\' Terms of Service and Privacy Policy.',
-        style: {
-          textAlign: 'center',
-          marginTop: '30px',
-          fontSize: '12px',
-          lineHeight: '16px',
-          color: '#36373C',
-        },
-      },
-      mfa: {
-        boxStyle: {
-          background: '#ffffff',
-          borderRadius: '12px',
-          boxShadow: '0 8px 32px rgba(0, 102, 204, 0.15)',
-        },
-      },
-      errorTheme: {
-        color: '#dc3545',
-        backgroundColor: '#fff5f5',
-        borderColor: '#dc3545',
-        borderRadius: '6px',
-        padding: '12px',
-        fontSize: '14px',
-        marginTop: '8px',
-      },
+      }
     },
   },
   localizations: {
