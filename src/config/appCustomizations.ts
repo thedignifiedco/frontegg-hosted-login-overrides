@@ -7,8 +7,7 @@ interface FronteggOverrides {
       themeName?: string;
       logo?: {
         image: string;
-        alt: string;
-        maxHeight: string;
+        favicon: string;
       };
       rootStyle?: Record<string, string>;
       boxStyle?: Record<string, string>;
@@ -49,7 +48,6 @@ const defaultCustomization: FronteggOverrides = {
       themeName: 'modern',
       logo: {
         image: process.env.LOGO_URL || 'https://biopharma.dignifiedlabs.com/pharmacy.png',
-        alt: 'Dignified Labs Logo',
         favicon: process.env.FAVICON_URL || 'https://biopharma.dignifiedlabs.com/pharmacy.png'
       },
       rootStyle: {
@@ -274,8 +272,7 @@ const alternativeCustomization: FronteggOverrides = {
       themeName: 'modern',
       logo: {
         image: process.env.ALT_LOGO_URL || 'https://example.com/logo.png',
-        alt: 'Alternative Logo',
-        maxHeight: '60px',
+        favicon: process.env.ALT_FAVICON_URL || 'https://example.com/favicon.png'
       },
       rootStyle: {
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
